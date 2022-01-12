@@ -1,0 +1,17 @@
+@mixin setLineClamp($variable) {
+    display: -webkit-box;
+    -webkit-line-clamp: $variable;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+@mixin setFlex($flex-direction, $justify-content: center, $align-items: center){
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+@function convertPxToRem($pxValue){
+    @return #{$pxValue / 16}rem;
+}
